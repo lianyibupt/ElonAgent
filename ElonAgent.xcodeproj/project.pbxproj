@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		2BDF12D02ECD9866006B3CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BDF12B52ECD9863006B3CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BDF12BC2ECD9864006B3CAB;
+			remoteInfo = ElonAgent;
+		};
+		2BDF12DA2ECD9866006B3CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BDF12B52ECD9863006B3CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BDF12BC2ECD9864006B3CAB;
+			remoteInfo = ElonAgent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BDF12BD2ECD9864006B3CAB /* ElonAgent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElonAgent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BDF12CF2ECD9866006B3CAB /* ElonAgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElonAgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BDF12D92ECD9866006B3CAB /* ElonAgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElonAgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2BDF12BF2ECD9864006B3CAB /* ElonAgent */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElonAgent;
+			sourceTree = "<group>";
+		};
+		2BDF12D22ECD9866006B3CAB /* ElonAgentTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElonAgentTests;
+			sourceTree = "<group>";
+		};
+		2BDF12DC2ECD9866006B3CAB /* ElonAgentUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ElonAgentUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BDF12BA2ECD9864006B3CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12CC2ECD9866006B3CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12D62ECD9866006B3CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BDF12B42ECD9863006B3CAB = {
+			isa = PBXGroup;
+			children = (
+				2BDF12BF2ECD9864006B3CAB /* ElonAgent */,
+				2BDF12D22ECD9866006B3CAB /* ElonAgentTests */,
+				2BDF12DC2ECD9866006B3CAB /* ElonAgentUITests */,
+				2BDF12BE2ECD9864006B3CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BDF12BE2ECD9864006B3CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF12BD2ECD9864006B3CAB /* ElonAgent.app */,
+				2BDF12CF2ECD9866006B3CAB /* ElonAgentTests.xctest */,
+				2BDF12D92ECD9866006B3CAB /* ElonAgentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BDF12BC2ECD9864006B3CAB /* ElonAgent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BDF12E32ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgent" */;
+			buildPhases = (
+				2BDF12B92ECD9864006B3CAB /* Sources */,
+				2BDF12BA2ECD9864006B3CAB /* Frameworks */,
+				2BDF12BB2ECD9864006B3CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2BDF12BF2ECD9864006B3CAB /* ElonAgent */,
+			);
+			name = ElonAgent;
+			packageProductDependencies = (
+			);
+			productName = ElonAgent;
+			productReference = 2BDF12BD2ECD9864006B3CAB /* ElonAgent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BDF12CE2ECD9866006B3CAB /* ElonAgentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BDF12E62ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgentTests" */;
+			buildPhases = (
+				2BDF12CB2ECD9866006B3CAB /* Sources */,
+				2BDF12CC2ECD9866006B3CAB /* Frameworks */,
+				2BDF12CD2ECD9866006B3CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BDF12D12ECD9866006B3CAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2BDF12D22ECD9866006B3CAB /* ElonAgentTests */,
+			);
+			name = ElonAgentTests;
+			packageProductDependencies = (
+			);
+			productName = ElonAgentTests;
+			productReference = 2BDF12CF2ECD9866006B3CAB /* ElonAgentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BDF12D82ECD9866006B3CAB /* ElonAgentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BDF12E92ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgentUITests" */;
+			buildPhases = (
+				2BDF12D52ECD9866006B3CAB /* Sources */,
+				2BDF12D62ECD9866006B3CAB /* Frameworks */,
+				2BDF12D72ECD9866006B3CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BDF12DB2ECD9866006B3CAB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2BDF12DC2ECD9866006B3CAB /* ElonAgentUITests */,
+			);
+			name = ElonAgentUITests;
+			packageProductDependencies = (
+			);
+			productName = ElonAgentUITests;
+			productReference = 2BDF12D92ECD9866006B3CAB /* ElonAgentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BDF12B52ECD9863006B3CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					2BDF12BC2ECD9864006B3CAB = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					2BDF12CE2ECD9866006B3CAB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 2BDF12BC2ECD9864006B3CAB;
+					};
+					2BDF12D82ECD9866006B3CAB = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 2BDF12BC2ECD9864006B3CAB;
+					};
+				};
+			};
+			buildConfigurationList = 2BDF12B82ECD9863006B3CAB /* Build configuration list for PBXProject "ElonAgent" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BDF12B42ECD9863006B3CAB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2BDF12BE2ECD9864006B3CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BDF12BC2ECD9864006B3CAB /* ElonAgent */,
+				2BDF12CE2ECD9866006B3CAB /* ElonAgentTests */,
+				2BDF12D82ECD9866006B3CAB /* ElonAgentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BDF12BB2ECD9864006B3CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12CD2ECD9866006B3CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12D72ECD9866006B3CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BDF12B92ECD9864006B3CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12CB2ECD9866006B3CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDF12D52ECD9866006B3CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BDF12D12ECD9866006B3CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BDF12BC2ECD9864006B3CAB /* ElonAgent */;
+			targetProxy = 2BDF12D02ECD9866006B3CAB /* PBXContainerItemProxy */;
+		};
+		2BDF12DB2ECD9866006B3CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BDF12BC2ECD9864006B3CAB /* ElonAgent */;
+			targetProxy = 2BDF12DA2ECD9866006B3CAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2BDF12E12ECD9866006B3CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BDF12E22ECD9866006B3CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BDF12E42ECD9866006B3CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ElonAgent/Preview Content\"";
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BDF12E52ECD9866006B3CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ElonAgent/Preview Content\"";
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BDF12E72ECD9866006B3CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElonAgent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ElonAgent";
+			};
+			name = Debug;
+		};
+		2BDF12E82ECD9866006B3CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElonAgent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ElonAgent";
+			};
+			name = Release;
+		};
+		2BDF12EA2ECD9866006B3CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ElonAgent;
+			};
+			name = Debug;
+		};
+		2BDF12EB2ECD9866006B3CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P29CKGM6UD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = elon.ElonAgentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ElonAgent;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BDF12B82ECD9863006B3CAB /* Build configuration list for PBXProject "ElonAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDF12E12ECD9866006B3CAB /* Debug */,
+				2BDF12E22ECD9866006B3CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BDF12E32ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDF12E42ECD9866006B3CAB /* Debug */,
+				2BDF12E52ECD9866006B3CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BDF12E62ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDF12E72ECD9866006B3CAB /* Debug */,
+				2BDF12E82ECD9866006B3CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BDF12E92ECD9866006B3CAB /* Build configuration list for PBXNativeTarget "ElonAgentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDF12EA2ECD9866006B3CAB /* Debug */,
+				2BDF12EB2ECD9866006B3CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BDF12B52ECD9863006B3CAB /* Project object */;
+}

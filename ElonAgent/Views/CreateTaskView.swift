@@ -18,10 +18,16 @@ struct NewTaskView: View {
     // Alert
     @State private var showingAlert = false
     
+    // Focus State
+    @FocusState private var isInputFocused: Bool
+    
     var body: some View {
         NavigationView {
             ZStack {
                 LiquidBackground()
+                    .onTapGesture {
+                        isInputFocused = false
+                    }
                 
                 ScrollView {
                     VStack(spacing: 24) {
@@ -31,6 +37,7 @@ struct NewTaskView: View {
                                 .font(.caption)
                                 .foregroundColor(LiquidTheme.textSecondary)
                             TextField("Enter title", text: $title)
+                                .focused($isInputFocused)
                                 .padding()
                                 .background(Color.white.opacity(0.5))
                                 .cornerRadius(12)
@@ -74,6 +81,7 @@ struct NewTaskView: View {
                                 .font(.caption)
                                 .foregroundColor(LiquidTheme.textSecondary)
                             TextEditor(text: $prompt)
+                                .focused($isInputFocused)
                                 .frame(height: 150)
                                 .padding()
                                 .background(Color.white.opacity(0.5))
@@ -116,13 +124,25 @@ struct NewTaskView: View {
                         // Reset form
                         title = ""
                         prompt = ""
+                        isInputFocused = false // Dismiss keyboard
+                    } else {
+                        presentationMode.wrappedValue.dismiss()
                     }
                 })
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        isInputFocused = false
+                    }
+                }
             }
         }
     }
     
     private func saveTask() {
+        isInputFocused = false // Dismiss keyboard immediately
         if isEditing, var task = taskToEdit {
             task.title = title
             task.frequency = frequency

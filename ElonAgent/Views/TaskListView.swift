@@ -16,11 +16,9 @@ struct HistoryView: View {
                             ForEach($viewModel.tasks) { $task in
                                 ZStack {
                                     NavigationLink(destination: TaskDetailView(task: $task)) {
-                                        EmptyView()
+                                        LiquidTaskCard(task: task)
                                     }
-                                    .opacity(0)
-                                    
-                                    LiquidTaskCard(task: task)
+                                    .buttonStyle(PlainButtonStyle()) // Prevents blue highlight
                                 }
                                 .padding(.horizontal)
                                 .contextMenu {

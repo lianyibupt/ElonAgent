@@ -89,12 +89,76 @@ struct TaskDetailView: View {
 
 struct HistoryItemView: View {
     var item: TaskHistoryItem
-    var renderedResult: AttributedString {
-        let normalized = item.result.replacingOccurrences(of: "\r\n", with: "\n")
-        let hardBreakApplied = normalized.replacingOccurrences(of: "\n", with: "  \n")
-        let restoreParagraphs = hardBreakApplied.replacingOccurrences(of: "  \n  \n", with: "\n\n")
-        let options = AttributedString.MarkdownParsingOptions(interpretedSyntax: .full)
-        return (try? AttributedString(markdown: restoreParagraphs, options: options)) ?? AttributedString(item.result)
+    enum MDBlock {
+        case heading(Int, String)
+        case list([String])
+        case code(String?)
+        case paragraph(String)
+    }
+    var blocks: [MDBlock] {
+        let input = item.result.replacingOccurrences(of: "\r\n", with: "\n")
+        var result: [MDBlock] = []
+        var lines = input.components(separatedBy: "\n")
+        var i = 0
+        while i < lines.count {
+            let line = lines[i]
+            if line.hasPrefix("```") {
+                let lang = line.replacingOccurrences(of: "```", with: "").trimmingCharacters(in: .whitespaces)
+                var codeLines: [String] = []
+                i += 1
+                while i < lines.count, !lines[i].hasPrefix("```") {
+                    codeLines.append(lines[i])
+                    i += 1
+                }
+                result.append(.code(codeLines.joined(separator: "\n")))
+                i += 1
+                continue
+            }
+            let headingLevel = line.prefix(while: { $0 == "#" }).count
+            if headingLevel > 0 {
+                let text = String(line.drop(while: { $0 == "#" })).trimmingCharacters(in: .whitespaces)
+                result.append(.heading(headingLevel, text))
+                i += 1
+                continue
+            }
+            let trimmed = line.trimmingCharacters(in: .whitespaces)
+            let firstToken = trimmed.split(separator: " ").first
+            let isOrdered = firstToken.flatMap { Int($0) } != nil && trimmed.contains(".")
+            if trimmed.hasPrefix("-") || trimmed.hasPrefix("*") || isOrdered {
+                var items: [String] = []
+                var j = i
+                while j < lines.count {
+                    let l = lines[j].trimmingCharacters(in: .whitespaces)
+                    if l.hasPrefix("-") || l.hasPrefix("*") { items.append(l.dropFirst().trimmingCharacters(in: .whitespaces)) ; j += 1 ; continue }
+                    if let first = l.split(separator: " ").first, Int(first) != nil, l.contains(".") {
+                        let after = l.split(separator: " ", maxSplits: 1, omittingEmptySubsequences: true)
+                        items.append(after.count > 1 ? String(after[1]) : "")
+                        j += 1
+                        continue
+                    }
+                    break
+                }
+                result.append(.list(items))
+                i = j
+                continue
+            }
+            if line.trimmingCharacters(in: .whitespaces).isEmpty {
+                i += 1
+                continue
+            }
+            var paraLines: [String] = [line]
+            var k = i + 1
+            while k < lines.count {
+                let l = lines[k]
+                if l.trimmingCharacters(in: .whitespaces).isEmpty { break }
+                if l.hasPrefix("```") || l.trimmingCharacters(in: .whitespaces).hasPrefix("-") || l.trimmingCharacters(in: .whitespaces).hasPrefix("*") || l.hasPrefix("#") { break }
+                paraLines.append(l)
+                k += 1
+            }
+            result.append(.paragraph(paraLines.joined(separator: "\n")))
+            i = k
+        }
+        return result
     }
     
     var body: some View {
@@ -111,10 +175,41 @@ struct HistoryItemView: View {
             
             Divider()
             
-            Text(renderedResult)
-                .font(.body)
-                .foregroundColor(LiquidTheme.textPrimary)
-                .padding(.vertical, 4)
+            VStack(alignment: .leading, spacing: 8) {
+                ForEach(Array(blocks.enumerated()), id: \.offset) { _, block in
+                    switch block {
+                    case .heading(let level, let text):
+                        Text(text)
+                            .font(level == 1 ? .title : (level == 2 ? .title2 : .headline))
+                            .bold()
+                            .foregroundColor(LiquidTheme.textPrimary)
+                    case .list(let items):
+                        VStack(alignment: .leading, spacing: 4) {
+                            ForEach(items, id: \.self) { it in
+                                HStack(alignment: .top, spacing: 6) {
+                                    Text("•")
+                                    Text((try? AttributedString(markdown: it, options: .init(interpretedSyntax: .full))) ?? AttributedString(it))
+                                }
+                                .foregroundColor(LiquidTheme.textPrimary)
+                            }
+                        }
+                    case .code(let code):
+                        Text(code ?? "")
+                            .font(.system(.body, design: .monospaced))
+                            .foregroundColor(LiquidTheme.textPrimary)
+                            .padding(10)
+                            .background(Color.black.opacity(0.05))
+                            .cornerRadius(8)
+                    case .paragraph(let text):
+                        let normalized = text.replacingOccurrences(of: "\r\n", with: "\n")
+                        let hardBreakApplied = normalized.replacingOccurrences(of: "\n", with: "  \n")
+                        let parsed = (try? AttributedString(markdown: hardBreakApplied, options: .init(interpretedSyntax: .full))) ?? AttributedString(text)
+                        Text(parsed)
+                            .foregroundColor(LiquidTheme.textPrimary)
+                    }
+                }
+            }
+            .padding(.vertical, 4)
         }
         .padding()
         .background(Color.white.opacity(0.8))

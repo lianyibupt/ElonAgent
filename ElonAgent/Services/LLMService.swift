@@ -35,26 +35,15 @@ class LLMService {
     
     // MARK: - Gemini API
     private func callGemini(apiKey: String, prompt: String) async throws -> String {
-        let urlString = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=\(apiKey)"
+        let urlString = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent"
         guard let url = URL(string: urlString) else { throw URLError(.badURL) }
-        
         let body: [String: Any] = [
             "contents": [
                 ["parts": [["text": prompt]]]
             ]
         ]
-        
-        let data = try await makeRequest(url: url, method: "POST", body: body)
-        
-        // Parse Gemini Response
-        if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-           let candidates = json["candidates"] as? [[String: Any]],
-           let content = candidates.first?["content"] as? [String: Any],
-           let parts = content["parts"] as? [[String: Any]],
-           let text = parts.first?["text"] as? String {
-            return text
-        }
-        
+        let data = try await makeRequest(url: url, method: "POST", body: body, headers: ["x-goog-api-key": apiKey])
+        if let text = try parseGeminiText(data: data) { return text }
         throw NSError(domain: "LLMService", code: 500, userInfo: [NSLocalizedDescriptionKey: "Failed to parse Gemini response"])
     }
     
@@ -119,6 +108,18 @@ class LLMService {
         return data
     }
     
+    private func parseGeminiText(data: Data) throws -> String? {
+        if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+           let candidates = json["candidates"] as? [[String: Any]],
+           let content = candidates.first?["content"] as? [String: Any],
+           let parts = content["parts"] as? [[String: Any]] {
+            for part in parts {
+                if let text = part["text"] as? String { return text }
+            }
+        }
+        return nil
+    }
+
     private func parseOpenAIStyleResponse(data: Data) throws -> String {
         if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
            let choices = json["choices"] as? [[String: Any]],
